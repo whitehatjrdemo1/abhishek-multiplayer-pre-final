@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Multiplayer Game</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-    <script src="p5.play.js"></script>
 
-   
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Multiplayer Game</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+  <script src="p5.play.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyC3l1FWdcuPi-rwKJIpIH2iaM-Okjbv8f8",
-    authDomain: "multiplayer-shooter-6986b.firebaseapp.com",
-    databaseURL: "https://multiplayer-shooter-6986b.firebaseio.com",
-    projectId: "multiplayer-shooter-6986b",
-    storageBucket: "multiplayer-shooter-6986b.appspot.com",
-    messagingSenderId: "759744448614",
-    appId: "1:759744448614:web:55a1dea7e555ba4a9185a7"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyASNyuXzgbuRxt9cPVKrIrhbrocqLP_pCQ",
+      authDomain: "shooter-8839c.firebaseapp.com",
+      databaseURL: "https://shooter-8839c.firebaseio.com",
+      projectId: "shooter-8839c",
+      storageBucket: "shooter-8839c.appspot.com",
+      messagingSenderId: "849055716843",
+      appId: "1:849055716843:web:a5da188d795ea02fd3f5ae"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
 
-    <script src="js/Player.js"></script>
-    <script src="js/Form.js"></script>
-    <script src="js/Game.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-  </head>
-  <body>
-    <script src="sketch.js"></script>
-  </body>
+  <script src="js/Player.js"></script>
+  <script src="js/Form.js"></script>
+  <script src="js/Game.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <script src="sketch.js"></script>
+</body>
+
 </html>
