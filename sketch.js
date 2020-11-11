@@ -16,14 +16,14 @@ var enemyHealth = 100;
 
 function preload() {
 
-  track = loadImage("../images/track.jpg");
-  blue_idle = loadAnimation("../images/Blue_Idle1.png", "../images/Blue_Idle2.png", "../images/Blue_Idle3.png", "../images/Blue_Idle4.png", "../images/Blue_Idle5.png");
-  car2_img = loadImage("../images/car2.png");
-  blue_run = loadAnimation("../images/Blue_Run1.png", "../images/Blue_Run2.png", "../images/Blue_Run3.png", "../images/Blue_Run4.png");
-  blue_crouch = loadAnimation("../images/Blue_Crouch1.png", "../images/Blue_Crouch2.png", "../images/Blue_Crouch3.png");
-  blue_death = loadAnimation("../images/Blue_Death1.png", "../images/Blue_Death2.png", "../images/Blue_Death3.png", "../images/Blue_Death4.png", "../images/Blue_Death5.png", "../images/Blue_Death6.png");
-  ground = loadImage("../images/ground.png");
-  blue_death_image = loadAnimation("../images/Blue_Death6.png")
+  track = loadImage("images/track.jpg");
+  blue_idle = loadAnimation("images/Blue_Idle1.png", "images/Blue_Idle2.png", "images/Blue_Idle3.png", "images/Blue_Idle4.png", "images/Blue_Idle5.png");
+  car2_img = loadImage("images/car2.png");
+  blue_run = loadAnimation("images/Blue_Run1.png", "images/Blue_Run2.png", "images/Blue_Run3.png", "images/Blue_Run4.png");
+  blue_crouch = loadAnimation("images/Blue_Crouch1.png", "images/Blue_Crouch2.png", "images/Blue_Crouch3.png");
+  blue_death = loadAnimation("images/Blue_Death1.png", "images/Blue_Death2.png", "images/Blue_Death3.png", "images/Blue_Death4.png", "images/Blue_Death5.png", "images/Blue_Death6.png");
+  ground = loadImage("images/ground.png");
+  blue_death_image = loadAnimation("images/Blue_Death6.png")
 }
 
 function setup() {
@@ -49,35 +49,39 @@ function draw() {
   }
   if (gameState === 2) {
     game.end();
+    game.update(2);
   }
 
   if (gameState === 3) {
     if (player.team === 1) {
       cars[player.index - 1].changeAnimation("blueRun", blue_run);
-      gameState = 1;
+      
     }
     else if (player.team === 2) {
       //cars[player.index - 1].changeAnimation("blueRun", blue_run);
       console.log("red run");
-      gameState = 1;
+     
     }
-
+    gameState = 1;
+    //game.update(1);
   }
   if (gameState === 4) {
     if (player.team === 1) {
 
       cars[player.index - 1].changeAnimation("blueCrouch", blue_crouch);
       console.log("crouch");
-      gameState = 1;
+      
+      
     }
     if (player.team === 2) {
 
       //cars[player.index - 1].changeAnimation("blueCrouch", blue_crouch);
       console.log("red crouch");
       gameState = 1;
+      
     }
-
-    game.update(gameState);
+    gameState = 1;
+    //game.update(1);
   }
 
 }
